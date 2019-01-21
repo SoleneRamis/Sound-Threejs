@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Aileron";
+    src: url("assets/font/aileronUltralight.woff") format("woff");
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #1c1c1f;
+    font-family: Aileron;
+}
+
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c1c1f;
+    font-family: Aileron;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-family: Aileron;
+    color: white;
+    letter-spacing: 6px;
+    font-size: 40px
+}
+
+#start {
+    font-family: Aileron;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 25px;
+    background: transparent;
+    width: 100%;
+    border: none;
+    background-image: linear-gradient(120deg, #d925b5 0%, #4730d0 100%);
+    background-repeat: no-repeat;
+    background-size: 23% 0.4em;
+    background-position: 49% 89%;
+    transition: background-size 0.25s ease-in;
+}
+
+#start:hover {
+    background-size: 23% 150%;
+}
+
+#start:focus {
+    outline: none
+}
+
+#description {
+    display: flex;
+    justify-content: center;
+    font-family: Aileron;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    width: 100%;
+    font-size: 25px;
+    background-image: linear-gradient(120deg, #d925b5 0%, #4730d0 100%);
+    background-repeat: no-repeat;
+    background-size: 70% 0.4em;
+    background-position: 49% 99%;
+    transition: background-size 0.25s ease-in;
+}
+
+#app {
+    display: none;
+}
+
+#main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.font {
+    position: absolute;
+    left: 21px;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: Aileron;
+    color: #e8e8e8;
+}
+
+.subtitle {
+    margin-top: -14px;
+}
