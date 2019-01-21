@@ -548,7 +548,7 @@ class Debug {
 var tick = 0;
 var isKick = 0;
 var src = 'https://res.cloudinary.com/dn32la6ny/video/upload/v1543921743/Worakls-Bleu.mp3';
-var sound = new Sound(src, 100, 1, () => { sound.play() }, false);
+var sound = new Sound(src, 100, 0);
 var firstKicks;
 var secondtKicks;
 var thirdKicks;
@@ -732,6 +732,7 @@ function render() {
 if (sound.ctx.state === 'suspended' && 'ontouchstart' in window) {
     var unlock = function () {
         sound.ctx.resume().then(function () {
+            sound.play()
             document.body.removeEventListener('touchstart', unlock);
             document.body.removeEventListener('touchend', unlock);
             document.getElementById("home").style.display = "none"
@@ -745,6 +746,7 @@ if (sound.ctx.state === 'suspended' && 'ontouchstart' in window) {
 }
 
 function start() {
+    sound.play()
     document.getElementById("home").style.display = "none";
     document.getElementById("app").style.display = "initial";
     document.getElementById("main").style.display = "initial";
